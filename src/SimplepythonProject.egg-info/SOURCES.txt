@@ -1,0 +1,8 @@
+pyproject.toml
+src/SimplepythonProject.egg-info/PKG-INFO
+src/SimplepythonProject.egg-info/SOURCES.txt
+src/SimplepythonProject.egg-info/dependency_links.txt
+src/SimplepythonProject.egg-info/top_level.txt
+src/sample/__init__.py
+src/sample/simple.py
+test/test_simple.py

@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: SimplepythonProject
+Version: 0.0.1
+Summary: Testing build package
+Author-email: Harshit <harshit@example.com>
+Project-URL: Homepage, https://dev.azure.com/hershal8090gupta/_git/Test-Orchestrator-Repo
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

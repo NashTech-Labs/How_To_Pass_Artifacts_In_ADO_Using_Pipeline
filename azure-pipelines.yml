@@ -1,0 +1,37 @@
+trigger: 
+- master
+
+pool: Harshit-pool
+
+steps:
+
+- script: |
+      pwd
+      ls -l
+  displayName: 'Check Path '
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.8'
+  displayName: 'Use Python 3.8'
+
+
+- script: |
+      python3 -m pip install --upgrade build
+      pip install twine
+      python3 -m build
+  displayName: 'Install dependencies'
+
+- script: |
+      pwd
+      ls -l
+  displayName: 'Check Path after build'
+
+
+- task: TwineAuthenticate@1
+  inputs:
+    artifactFeed: 'python-artifacts'
+    
+- script: |
+      twine upload -r "python-artifacts" --config-file $(PYPIRC_PATH) dist/* --verbose
+  displayName: 'Twin Artifact'
